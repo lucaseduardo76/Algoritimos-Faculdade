@@ -70,5 +70,4 @@ def ex3():
         nome = input(f"Digite o nome do {cont}° comprador da rifa: ")
         next = input("Deseja adicionar outra pessoa? ")
         ver = 's'
-        while ver != 's' or ver != 'S' and ver != 'n' or ver != 'N':
             
