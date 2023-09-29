@@ -34,8 +34,7 @@ def ex2():
 
         nadador_atual = [nome_atual, tempo_atual]
         nadadores.append(nadador_atual)    
-
-
+        
     ind_p = 0
     ind_m = 0
     t_m = 0
