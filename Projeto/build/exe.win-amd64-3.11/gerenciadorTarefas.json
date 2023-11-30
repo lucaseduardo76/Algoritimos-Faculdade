@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "tituloTarefa": "Levar lixo",
+    "idColaborador": 1,
+    "data": "24/11/2023",
+    "descricao": "Levar todo o lixo"
+  },
+  {
+    "id": 2,
+    "tituloTarefa": "Lipar a casa",
+    "idColaborador": 3,
+    "data": "25/11/2023",
+    "descricao": "Levar todo o lixo"
+  },
+  {
+    "id": 3,
+    "tituloTarefa": "Dirigir",
+    "idColaborador": 2,
+    "data": "24/11/2023",
+    "descricao": "Com atenção"
+  },
+  {
+    "id": 4,
+    "tituloTarefa": "abc",
+    "idColaborador": 1,
+    "data": "26/11/2023",
+    "descricao": "def"
+  }
+]
