@@ -8,8 +8,8 @@ public class ex04 {
         
         System.out.println("Iremos fabricar sua porta!");
         int choose = 0;
-        while(choose > 4 && choose < 1){
-            System.out.println("Digite por favor a cor da porta \n 1º Azul \n 2° Verde \n 3° Preto \n 4° Branco");
+        while(choose > 4 || choose < 1){
+            System.out.println("Digite por favor a cor da porta \n1º Azul \n2° Verde \n3° Preto \n4° Branco");
             choose = sc.nextInt();
         }
         switch(choose){
@@ -29,19 +29,19 @@ public class ex04 {
                 cor = "Cinza";               
         }   
 
-        System.out.println("Agora vamos as dimensões: \n Digite por favor o comprimento: ");
-        int comp = sc.nextInt();
+        System.out.println("Agora vamos as dimensões: \nDigite por favor o comprimento: ");
+        float comp = sc.nextFloat();
         System.out.println("Agora a largura: ");
-        int esp = sc.nextInt();
-        int larg = sc.nextInt();
+        float larg = sc.nextFloat();
         System.out.println("Agora a espessura");
+        float esp = sc.nextFloat();
         
         Porta porta = new Porta(cor, comp, larg, esp);
         
         while(cont == 1){
-
+            System.out.println("As informações da porta são: \nCor: "+ porta.getCor() + "\nComprimento: " +porta.getDimensaoY() +"\nLargura: "+ porta.getDimensaoX()+ "\nEspessura: "+porta.getDimensaoZ());
             
-            
+            cont = 0;
         }
         sc.close();
     }
@@ -50,31 +50,44 @@ public class ex04 {
 class Porta{
     boolean aberta = false;
     String cor;
-    double dimensaoX, dimensaoY, dimensaoZ;
+    float dimensaoX, dimensaoY, dimensaoZ;
 
-    public Porta(String cor, double dimensaoX, double dimensaoY, double dimensaoZ){
+    public Porta(String cor, float dimensaoX, float dimensaoY, float dimensaoZ){
         this.cor = cor;
         this.dimensaoX = dimensaoX;
         this.dimensaoY = dimensaoY;
         this.dimensaoZ = dimensaoZ;
     }
 
-    boolean abre(){
+    public boolean abre(){
         boolean i = this.aberta ? false : true;
         this.aberta = true;
         return i;
     }
 
-    boolean fecha(){
+    public boolean fecha(){
         boolean i = this.aberta ? true : false;
         this.aberta = false;
         return i;
     }
 
-    void pintar(String cor){
+    public void pintar(String cor){
         this.cor = cor;
     }
-    boolean estaAberta(){
+    public boolean estaAberta(){
         return this.aberta;
-    }    
+    }  
+    
+    public String getCor() {
+        return this.cor;
+    }
+    public float getDimensaoY() {
+        return dimensaoY;
+    }
+    public float getDimensaoX() {
+        return dimensaoX;
+    }
+    public float getDimensaoZ() {
+        return dimensaoZ;
+    }
 }
